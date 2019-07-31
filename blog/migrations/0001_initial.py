@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=200)),
                 ('pub_date', models.DateTimeField(verbose_name='date published')),
                 ('body', models.TextField()),
+                ('image', models.ImageField(upload_to='images/'))
             ],
         ),
     ]
