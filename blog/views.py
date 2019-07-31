@@ -20,7 +20,7 @@ def create(request):
     blog.title = request.GET['title']
     blog.body = request.GET['body']
     blog.pub_date = timezone.datetime.now()
-    blog.image = request.GET['image']
+    #blog.image = request.GET['image']
     blog.save()
     return redirect('/')
 
