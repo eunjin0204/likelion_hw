@@ -4,9 +4,7 @@ cement==2.8.2
 certifi==2019.6.16
 chardet==3.0.4
 colorama==0.3.9
-dj-database-url==0.5.0
-Django==2.2.3
-docutils==0.14
+dj-database-url==0.5.0ggd
 future==0.16.0
 gunicorn==19.9.0
 idna==2.7
