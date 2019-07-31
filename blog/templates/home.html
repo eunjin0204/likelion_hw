@@ -7,7 +7,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>Blog_Likelion7</title>
+    <style>
+            body{
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+            h1{
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            
+        </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,17 +41,24 @@
                 </form>
             </div>
         </nav>
-    </div><br><br>
-    <div class="container">
+    </div>
     <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" style="width:100%;"><br><br>
+    <div class="container">
+    
      
         {% for blog in blogs.all %}
+        
         <h1>{{blog.title}}</h1>
         <p>{{blog.pub_date}}</p>
-        <p>{{blog.summary}}
-        <a href="{% url 'detail' blog.id %}">...more</a></p>
+        <div class="content">
+            <img src="{{blog.image.url}}" alt="No Photo" style="width:100px; float:left; margin-right:50px;">
+            <p>{{blog.summary}}
+            <a href="{% url 'detail' blog.id %}">...more</a></p>
+        </div><br>
+        
         {% endfor %}
     </div>
     
 </body>
+
 </html>
